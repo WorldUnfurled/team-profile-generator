@@ -1,7 +1,18 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-const builder = () => {
+const getManager = () => {
+
+    inquirer
+        .prompt({
+            name: 'officeNumber',
+            message: "What is the Manager's office number?",
+            type: 'input'
+        });
+
+}
+
+const getTeamMember = () => {
 
     inquirer
         .prompt({
@@ -14,13 +25,11 @@ const builder = () => {
 
             switch(data.role) {
                 case 'Manager':
-                    console.log('Manager');
+                    getManager();
                     break;
                 case 'Engineer':
-                    console.log('Engineer');
                     break;
                 case 'Intern':
-                    console.log('Intern');
                     break;
                 default:
                     console.log('Please enter a valid name');
@@ -30,4 +39,4 @@ const builder = () => {
 
 }
 
-builder();
+getTeamMember();
