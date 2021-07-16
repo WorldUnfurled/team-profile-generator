@@ -1,17 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-const getManager = () => {
-
-    inquirer
-        .prompt({
-            name: 'officeNumber',
-            message: "What is the Manager's office number?",
-            type: 'input'
-        });
-
-}
-
 const getTeamMember = () => {
 
     inquirer
@@ -28,13 +17,48 @@ const getTeamMember = () => {
                     getManager();
                     break;
                 case 'Engineer':
+                    getEngineer();
                     break;
                 case 'Intern':
+                    getIntern();
                     break;
                 default:
                     console.log('Please enter a valid name');
             }
 
+        });
+
+}
+
+const getManager = () => {
+
+    inquirer
+        .prompt({
+            name: 'officeNumber',
+            message: "What is the Manager's office number?",
+            type: 'input'
+        });
+
+}
+
+const getEngineer = () => {
+
+    inquirer
+        .prompt({
+            name: 'github',
+            message: "What is the Engineer's Github username?",
+            type: 'input'
+        });
+
+}
+
+const getIntern = () => {
+
+    inquirer
+        .prompt({
+            name: 'school',
+            message: "What school did the intern go to?",
+            type: 'input'
         });
 
 }
