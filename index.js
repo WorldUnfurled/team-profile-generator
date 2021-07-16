@@ -8,3 +8,20 @@ inquirer
         type: 'list',
         choices: ['Manager', 'Engineer', 'Intern']
     })
+    .then((data) => {
+
+        switch(data.firstRole) {
+            case 'Manager':
+                console.log('Manager');
+                break;
+            case 'Engineer':
+                console.log('Engineer');
+                break;
+            case 'Intern':
+                console.log('Intern');
+                break;
+            default:
+                console.log('Please enter a valid name');
+    }
+
+    });
