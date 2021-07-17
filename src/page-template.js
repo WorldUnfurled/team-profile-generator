@@ -26,7 +26,7 @@ const generateTemplate = (memberCards) => {
 // Generates Manager Card
 const generateManagers = (managers) => {
     return `<div class="card border-primary bg-dark" style="max-width: 18rem;">
-    <div class="card-header text-primary"><h1 class="header-span" style="">${managers.name}</h1><br><h2 class="header-cap" style="font-size: 1.5 em;">Manager</h2></div>
+    <div class="card-header text-primary"><h1 class="header-span">${managers.name}</h1><br><h2 class="header-cap" style="font-size: 1.5 em;">Manager</h2></div>
       <div class="card-body text-primary">
         <h5 class="card-title">Attributes</h5>
         <p class="card-text">ID: ${managers.id}</p>
@@ -39,7 +39,7 @@ const generateManagers = (managers) => {
 // Generates Engineer Card
 const generateEngineers = (engineers) => {
     return `<div class="card border-primary bg-dark" style="max-width: 18rem;">
-    <div class="card-header text-primary"><h1 class="header-span" style="">${engineers.name}</h1><br><h2 class="header-cap" style="font-size: 1.5 em;">Engineer</h2></div>
+    <div class="card-header text-primary"><h1 class="header-span">${engineers.name}</h1><br><h2 class="header-cap" style="font-size: 1.5 em;">Engineer</h2></div>
       <div class="card-body text-primary">
         <h5 class="card-title">Attributes</h5>
         <p class="card-text">ID: ${engineers.id}</p>
@@ -52,7 +52,7 @@ const generateEngineers = (engineers) => {
 // Generates Intern Card
 const generateInterns = (interns) => {
     return `<div class="card border-primary bg-dark" style="max-width: 18rem;">
-    <div class="card-header text-primary"><h1 class="header-span" style="">${interns.name}</h1><br><h2 class="header-cap" style="font-size: 1.5 em;">Intern</h2></div>
+    <div class="card-header text-primary"><h1 class="header-span">${interns.name}</h1><br><h2 class="header-cap" style="font-size: 1.5 em;">Intern</h2></div>
       <div class="card-body text-primary">
         <h5 class="card-title">Attributes</h5>
         <p class="card-text">ID: ${interns.id}</p>
