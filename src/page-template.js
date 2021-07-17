@@ -1,4 +1,4 @@
-generateTemplate() {
+generateTemplate(memberList) {
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
