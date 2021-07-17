@@ -100,10 +100,6 @@ const getManager = () => {
             const manager = new Manager(firstName, id, email, officeNumber);
 
             managers.push(manager);
-            console.log(typeof(managers[0]['name']));
-            console.log(typeof(managers[0]['id']));
-            console.log(typeof(managers[0]['email']));
-            console.log(typeof(managers[0]['officeNumber']));
             getTeamMember();
         });
 
