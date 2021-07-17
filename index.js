@@ -11,10 +11,13 @@ const Intern = require('./lib/Intern');
 // Template Imports
 const pageTemplate = require('./src/page-template');
 
-// Employee Container
+// Employee Containers
 const managers = [];
 const engineers = [];
 const interns = [];
+
+// All Employees Container
+const employees = [];
 
 // Main Employee Generator
 const getTeamMember = () => {
@@ -22,9 +25,9 @@ const getTeamMember = () => {
     inquirer
         .prompt({
             name: 'role',
-            message: "Which role would you like to build first?",
+            message: "Which role would you like to build?",
             type: 'list',
-            choices: ['Manager', 'Engineer', 'Intern']
+            choices: ['Manager', 'Engineer', 'Intern', '_Exit_']
         })
         .then((data) => {
 
@@ -40,18 +43,18 @@ const getTeamMember = () => {
                     break;
                 default:
                     for (let i = 0; i < managers.length; i++) {
-                        members.push(pageTemplate.generateManagers(managers));
+                        employees.push(pageTemplate.generateManagers(managers));
                     }
         
                     for (let i = 0; i < engineers.length; i++) {
-                        members.push(pageTemplate.generateEngineers(engineers));
+                        employees.push(pageTemplate.generateEngineers(engineers));
                     }
         
                     for (let i = 0; i < interns.length; i++) {
-                        members.push(pageTemplate.generateInterns(interns));
+                        employees.push(pageTemplate.generateInterns(interns));
                     }
         
-                    fs.writeFile(path.join(__dirname, 'dist/example.html'), 'Success!', (err) => {
+                    fs.writeFile(path.join(__dirname, 'dist/example.html'), pageTemplate.generateTemplate(employees), (err) => {
                         if (err) throw err;
                     });
             }
