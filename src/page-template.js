@@ -1,4 +1,4 @@
-generateTemplate(memberList) {
+const generateTemplate = (memberList) => {
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -8,10 +8,12 @@ generateTemplate(memberList) {
         <title>Document</title>
     </head>
     <body>`
-        + generateManagers 
-        + generateEngineers 
-        + generateInterns 
+        + generateManagers(memberList)
+        + generateEngineers(memberList) 
+        + generateInterns(memberList) 
         +
     `</body>
     </html>`
 }
+
+exports.generateTemplate = generateTemplate;
