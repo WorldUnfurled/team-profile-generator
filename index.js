@@ -97,7 +97,12 @@ const getEngineer = () => {
     inquirer
         .prompt(engineerQuestions)
         .then(data => {
+            const firstName = data.firstName;
+            const id = data.id;
+            const email = data.email;
+            const officeNumber = data.officeNumber;
 
+            const manager = new Manager(firstName, id, email, officeNumber);
         });
 
 }
