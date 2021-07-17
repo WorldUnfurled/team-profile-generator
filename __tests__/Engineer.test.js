@@ -25,5 +25,13 @@ describe("Engineer", () => {
             expect(engineer.getEmail()).toEqual('brooks@gmail.com');
         });
     });
+
+    describe('getGithub', () => {
+        it("should return the engineer's github username", () => {
+            let engineer = new Engineer('Brooks', 22, 'brooks@gmail.com', 'WorldUnfurled');
     
+            expect(engineer.getGithub()).toEqual('WorldUnfurled');
+        });
+    });
+
 });

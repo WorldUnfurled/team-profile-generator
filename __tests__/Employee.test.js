@@ -1,7 +1,7 @@
 const Employee = require('../lib/Employee');
 
 describe("Employee", () => {
-    
+
     describe('getName', () => {
         it("should return the employee's name", () => {
             let employee = new Employee('Brooks', 22, 'brooks@gmail.com');
