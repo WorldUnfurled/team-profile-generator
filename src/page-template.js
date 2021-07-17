@@ -41,7 +41,7 @@ const generateEngineers = (engineers) => {
         <h5 class="card-title">Attributes</h5>
         <p class="card-text">ID: ${engineers.id}</p>
         <p class="card-text">Email: ${engineers.email}</p>
-        <p class="card-text">Office Number: ${engineers.github}</p>
+        <a class="card-text" href="github.com/${engineers.github}">Github: github.com/${engineers.github}</a>
       </div>
     </div>`
 }
@@ -54,7 +54,7 @@ const generateInterns = (interns) => {
         <h5 class="card-title">Attributes</h5>
         <p class="card-text">ID: ${interns.id}</p>
         <p class="card-text">Email: ${interns.email}</p>
-        <p class="card-text">Office Number: ${interns.school}</p>
+        <p class="card-text">School: ${interns.school}</p>
       </div>
     </div>`
 }

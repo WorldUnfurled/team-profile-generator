@@ -140,7 +140,7 @@ const getEngineer = () => {
             const github = data.github;
 
             const engineer = new Engineer(firstName, id, email, github);
-            engineers.push(engineer.name);
+            engineers.push(engineer);
             console.log(engineers);
             getTeamMember();
         });
