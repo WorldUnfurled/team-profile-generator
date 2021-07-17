@@ -9,9 +9,8 @@ const generateTemplate = (memberList) => {
         <title>Document</title>
     </head>
     <body>`
-        + generateManagers(memberList)
-        + generateEngineers(memberList) 
-        + generateInterns(memberList) 
+        + 
+        memberList
         +
     `</body>
     </html>`
@@ -27,7 +26,7 @@ const generateManagers = (managers) => {
     </div>`
 }
 
-const generateEngineers = (managers) => {
+const generateEngineers = (engineers) => {
     return `<div class="card border-primary bg-dark" style="max-width: 18rem;">
     <div class="card-header text-primary"><h1 class="header-span" style="">Header</h1><br><h2 class="header-cap" style="font-size: 1.5 em;">Caption</h2></div>
       <div class="card-body text-primary">
@@ -37,7 +36,7 @@ const generateEngineers = (managers) => {
     </div>`
 }
 
-const generateInterns = (managers) => {
+const generateInterns = (interns) => {
     return `<div class="card border-primary bg-dark" style="max-width: 18rem;">
     <div class="card-header text-primary"><h1 class="header-span" style="">Header</h1><br><h2 class="header-cap" style="font-size: 1.5 em;">Caption</h2></div>
       <div class="card-body text-primary">

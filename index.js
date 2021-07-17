@@ -1,5 +1,6 @@
 // Module Imports
 const fs = require('fs');
+const path = require('path');
 const inquirer = require('inquirer');
 
 // Class Imports
@@ -37,6 +38,22 @@ const getTeamMember = () => {
                 case 'Intern':
                     getIntern();
                     break;
+                default:
+                    for (let i = 0; i < managers.length; i++) {
+                        members.push(pageTemplate.generateManagers(managers));
+                    }
+        
+                    for (let i = 0; i < engineers.length; i++) {
+                        members.push(pageTemplate.generateEngineers(engineers));
+                    }
+        
+                    for (let i = 0; i < interns.length; i++) {
+                        members.push(pageTemplate.generateInterns(interns));
+                    }
+        
+                    fs.writeFile(path.join(__dirname, 'dist/example.html'), 'Success!', (err) => {
+                        if (err) throw err;
+                    });
             }
 
         });
@@ -175,3 +192,5 @@ const getIntern = () => {
 
 // Creates a Team Member
 getTeamMember();
+
+// console.log(__dirname);
