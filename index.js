@@ -8,7 +8,7 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
 // Employee Container
-const teamMembers = [];
+const members = [];
 
 // Main Employee Generator
 const getTeamMember = () => {
@@ -74,7 +74,7 @@ const getManager = () => {
 
             const manager = new Manager(firstName, id, email, officeNumber);
 
-            teamMembers.push(manager);
+            members.push(manager);
         });
 
 }
@@ -114,7 +114,9 @@ const getEngineer = () => {
             const github = data.github;
 
             const engineer = new Engineer(firstName, id, email, github);
-            teamMembers.push(engineer);
+            members.push(engineer.name);
+            console.log(members);
+            getTeamMember();
         });
 
 }
@@ -154,7 +156,7 @@ const getIntern = () => {
             const school = data.school;
 
             const intern = new Intern(firstName, id, email, school);
-            teamMembers.push(intern);
+            members.push(intern);
         });
 
 }
