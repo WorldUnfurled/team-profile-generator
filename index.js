@@ -43,15 +43,15 @@ const getTeamMember = () => {
                     break;
                 default:
                     for (let i = 0; i < managers.length; i++) {
-                        employees.push(pageTemplate.generateManagers(managers));
+                        employees.push(pageTemplate.generateManagers(managers[i]));
                     }
         
                     for (let i = 0; i < engineers.length; i++) {
-                        employees.push(pageTemplate.generateEngineers(engineers));
+                        employees.push(pageTemplate.generateEngineers(engineers[i]));
                     }
         
                     for (let i = 0; i < interns.length; i++) {
-                        employees.push(pageTemplate.generateInterns(interns));
+                        employees.push(pageTemplate.generateInterns(interns[i]));
                     }
         
                     fs.writeFile(path.join(__dirname, 'dist/example.html'), pageTemplate.generateTemplate(employees), (err) => {

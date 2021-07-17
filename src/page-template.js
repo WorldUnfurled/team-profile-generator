@@ -1,5 +1,5 @@
 // Main template generation
-const generateTemplate = (memberList) => {
+const generateTemplate = (memberCards) => {
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -10,12 +10,13 @@ const generateTemplate = (memberList) => {
     </head>
     <body>`
         + 
-        memberList
+        memberCards
         +
     `</body>
     </html>`
 }
 
+// Generates Manager Card
 const generateManagers = (managers) => {
     return `<div class="card border-primary bg-dark" style="max-width: 18rem;">
     <div class="card-header text-primary"><h1 class="header-span" style="">Header</h1><br><h2 class="header-cap" style="font-size: 1.5 em;">Caption</h2></div>
@@ -26,6 +27,7 @@ const generateManagers = (managers) => {
     </div>`
 }
 
+// Generates Engineer Card
 const generateEngineers = (engineers) => {
     return `<div class="card border-primary bg-dark" style="max-width: 18rem;">
     <div class="card-header text-primary"><h1 class="header-span" style="">Header</h1><br><h2 class="header-cap" style="font-size: 1.5 em;">Caption</h2></div>
@@ -36,6 +38,7 @@ const generateEngineers = (engineers) => {
     </div>`
 }
 
+// Generates Intern Card
 const generateInterns = (interns) => {
     return `<div class="card border-primary bg-dark" style="max-width: 18rem;">
     <div class="card-header text-primary"><h1 class="header-span" style="">Header</h1><br><h2 class="header-cap" style="font-size: 1.5 em;">Caption</h2></div>
