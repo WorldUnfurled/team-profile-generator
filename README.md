@@ -1,11 +1,15 @@
 # team-profile-generator
 
 ## Table of Contents
-[1. Description](#description)
-[2. Installation](#installation)
-[3. Usage](#usage)
-[4. Tests](#tests)
-[5. Links](#links)
+[1. Description](#description);
+
+[2. Installation](#installation);
+
+[3. Usage](#usage);
+
+[4. Tests](#tests);
+
+[5. Links](#links);
 
 ## Description
 
