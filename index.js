@@ -7,6 +7,10 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
+// Employee Container
+const teamMembers = [];
+
+// Main Employee Generator
 const getTeamMember = () => {
 
     inquirer
@@ -28,14 +32,13 @@ const getTeamMember = () => {
                 case 'Intern':
                     getIntern();
                     break;
-                default:
-                    console.log('Please enter a valid name');
             }
 
         });
 
 }
 
+// Manager generator
 const getManager = () => {
 
     let managerQuestions = [
@@ -64,11 +67,19 @@ const getManager = () => {
     inquirer
         .prompt(managerQuestions)
         .then(data => {
+            const firstName = data.firstName;
+            const id = data.id;
+            const email = data.email;
+            const officeNumber = data.officeNumber;
 
+            const manager = new Manager(firstName, id, email, officeNumber);
+
+            teamMembers.push(manager);
         });
 
 }
 
+// Engineer generator
 const getEngineer = () => {
 
     let engineerQuestions = [
@@ -88,7 +99,7 @@ const getEngineer = () => {
             type: 'input' 
         }, 
         {
-            name: 'officeNumber',
+            name: 'github',
             message: "What is the engineer's github username?",
             type: 'input'
         }
@@ -100,13 +111,15 @@ const getEngineer = () => {
             const firstName = data.firstName;
             const id = data.id;
             const email = data.email;
-            const officeNumber = data.officeNumber;
+            const github = data.github;
 
-            const manager = new Manager(firstName, id, email, officeNumber);
+            const engineer = new Engineer(firstName, id, email, github);
+            teamMembers.push(engineer);
         });
 
 }
 
+// Intern generator
 const getIntern = () => {
 
     let internQuestions = [
@@ -126,22 +139,25 @@ const getIntern = () => {
             type: 'input' 
         }, 
         {
-            name: 'officeNumber',
+            name: 'school',
             message: "What school did the intern go to?",
             type: 'input'
         }
     ]
 
     inquirer
-        .prompt({
-            name: 'school',
-            message: "What school did the intern go to?",
-            type: 'input'
-        })
+        .prompt(internQuestions)
         .then(data => {
+            const firstName = data.firstName;
+            const id = data.id;
+            const email = data.email;
+            const school = data.school;
 
+            const intern = new Intern(firstName, id, email, school);
+            teamMembers.push(intern);
         });
 
 }
 
+// Creates a Team Member
 getTeamMember();
