@@ -7,8 +7,13 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
+// Template Imports
+const pageTemplate = require('./src/page-template');
+
 // Employee Container
-const members = [];
+const managers = [];
+const engineers = [];
+const interns = [];
 
 // Main Employee Generator
 const getTeamMember = () => {
@@ -74,7 +79,12 @@ const getManager = () => {
 
             const manager = new Manager(firstName, id, email, officeNumber);
 
-            members.push(manager);
+            managers.push(manager);
+            console.log(typeof(managers[0]['name']));
+            console.log(typeof(managers[0]['id']));
+            console.log(typeof(managers[0]['email']));
+            console.log(typeof(managers[0]['officeNumber']));
+            getTeamMember();
         });
 
 }
@@ -114,8 +124,8 @@ const getEngineer = () => {
             const github = data.github;
 
             const engineer = new Engineer(firstName, id, email, github);
-            members.push(engineer.name);
-            console.log(members);
+            engineers.push(engineer.name);
+            console.log(engineers);
             getTeamMember();
         });
 
@@ -156,7 +166,9 @@ const getIntern = () => {
             const school = data.school;
 
             const intern = new Intern(firstName, id, email, school);
-            members.push(intern);
+            interns.push(intern);
+            console.log(interns);
+            getTeamMember();
         });
 
 }
