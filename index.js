@@ -1,5 +1,11 @@
+// Module Imports
 const fs = require('fs');
 const inquirer = require('inquirer');
+
+// Class Imports
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 
 const getTeamMember = () => {
 
@@ -32,33 +38,103 @@ const getTeamMember = () => {
 
 const getManager = () => {
 
-    inquirer
-        .prompt({
-            name: 'officeNumber',
-            message: "What is the Manager's office number?",
+    let managerQuestions = [
+        {
+            name: 'firstName',
+            message: "What is the manager's first name?",
             type: 'input'
+        },
+        {
+            name: 'id',
+            message: "What is the manager's id?",
+            type: 'input' 
+        },
+        {
+            name: 'email',
+            message: "What is the manager's email?",
+            type: 'input' 
+        }, 
+        {
+            name: 'officeNumber',
+            message: "What is the manager's office number?",
+            type: 'input'
+        }
+    ]
+
+    inquirer
+        .prompt(managerQuestions)
+        .then(data => {
+
         });
 
 }
 
 const getEngineer = () => {
 
-    inquirer
-        .prompt({
-            name: 'github',
-            message: "What is the Engineer's Github username?",
+    let engineerQuestions = [
+        {
+            name: 'firstName',
+            message: "What is the engineer's first name?",
             type: 'input'
+        },
+        {
+            name: 'id',
+            message: "What is the engineer's id?",
+            type: 'input' 
+        },
+        {
+            name: 'email',
+            message: "What is the engineer's email?",
+            type: 'input' 
+        }, 
+        {
+            name: 'officeNumber',
+            message: "What is the engineer's github username?",
+            type: 'input'
+        }
+    ]
+
+    inquirer
+        .prompt(engineerQuestions)
+        .then(data => {
+
         });
 
 }
 
 const getIntern = () => {
 
+    let internQuestions = [
+        {
+            name: 'firstName',
+            message: "What is the intern's first name?",
+            type: 'input'
+        },
+        {
+            name: 'id',
+            message: "What is the intern's id?",
+            type: 'input' 
+        },
+        {
+            name: 'email',
+            message: "What is the intern's email?",
+            type: 'input' 
+        }, 
+        {
+            name: 'officeNumber',
+            message: "What school did the intern go to?",
+            type: 'input'
+        }
+    ]
+
     inquirer
         .prompt({
             name: 'school',
             message: "What school did the intern go to?",
             type: 'input'
+        })
+        .then(data => {
+
         });
 
 }
