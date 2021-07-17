@@ -1,3 +1,4 @@
+// Main template generation
 const generateTemplate = (memberList) => {
     return `<!DOCTYPE html>
     <html lang="en">
@@ -16,4 +17,38 @@ const generateTemplate = (memberList) => {
     </html>`
 }
 
+const generateManagers = (managers) => {
+    return `<div class="card border-primary bg-dark" style="max-width: 18rem;">
+    <div class="card-header text-primary"><h1 class="header-span" style="">Header</h1><br><h2 class="header-cap" style="font-size: 1.5 em;">Caption</h2></div>
+      <div class="card-body text-primary">
+        <h5 class="card-title">Primary card title</h5>
+        <p class="card-text">Adios</p>
+      </div>
+    </div>`
+}
+
+const generateEngineers = (managers) => {
+    return `<div class="card border-primary bg-dark" style="max-width: 18rem;">
+    <div class="card-header text-primary"><h1 class="header-span" style="">Header</h1><br><h2 class="header-cap" style="font-size: 1.5 em;">Caption</h2></div>
+      <div class="card-body text-primary">
+        <h5 class="card-title">Primary card title</h5>
+        <p class="card-text">Adios</p>
+      </div>
+    </div>`
+}
+
+const generateInterns = (managers) => {
+    return `<div class="card border-primary bg-dark" style="max-width: 18rem;">
+    <div class="card-header text-primary"><h1 class="header-span" style="">Header</h1><br><h2 class="header-cap" style="font-size: 1.5 em;">Caption</h2></div>
+      <div class="card-body text-primary">
+        <h5 class="card-title">Primary card title</h5>
+        <p class="card-text">Adios</p>
+      </div>
+    </div>`
+}
+
+// Exports
 exports.generateTemplate = generateTemplate;
+exports.generateManagers = generateManagers;
+exports.generateEngineers = generateEngineers;
+exports.generateInterns = generateInterns;
