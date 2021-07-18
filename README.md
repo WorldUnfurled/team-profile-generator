@@ -15,6 +15,8 @@
 
 Command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
 
+https://user-images.githubusercontent.com/80599137/126053611-514b4868-5ea1-4a5b-aae5-292333f818a4.mp4
+
 ## Installation
 
 Run `npm init -y` for package.json initialization.
