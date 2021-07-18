@@ -25,41 +25,44 @@ const generateTemplate = (memberCards) => {
 
 // Generates Manager Card
 const generateManagers = (managers) => {
-    return `<div class="card border-primary bg-dark" style="max-width: 18rem;">
-    <div class="card-header text-primary"><h1 class="header-span">${managers.name}</h1><br><h2 class="header-cap" style="font-size: 1.5 em;">Manager</h2></div>
-      <div class="card-body text-primary">
+    return `<div class="card border-success mb-3" style="max-width: 25rem;">
+      <div class="card-header bg-transparent border-primary">${managers.getName()}</div>
+      <div class="card-body text-success">
         <h5 class="card-title">Attributes</h5>
-        <p class="card-text">ID: ${managers.id}</p>
-        <p class="card-text">Email: ${managers.email}</p>
-        <p class="card-text">Office Number: ${managers.officeNumber}</p>
+        <p class="card-text">${managers.getId()}</p>
+        <p class="card-text">${managers.getEmail()}</p>
+        <p class="card-text">${managers.getOfficeNumber()}</p>
       </div>
+      <div class="card-footer bg-transparent border-success">${managers.getRole()}</div>
     </div>`
 }
 
 // Generates Engineer Card
 const generateEngineers = (engineers) => {
-    return `<div class="card border-primary bg-dark" style="max-width: 18rem;">
-    <div class="card-header text-primary"><h1 class="header-span">${engineers.name}</h1><br><h2 class="header-cap" style="font-size: 1.5 em;">Engineer</h2></div>
-      <div class="card-body text-primary">
-        <h5 class="card-title">Attributes</h5>
-        <p class="card-text">ID: ${engineers.id}</p>
-        <p class="card-text">Email: ${engineers.email}</p>
-        <a class="card-text" href="github.com/${engineers.github}">Github: github.com/${engineers.github}</a>
-      </div>
-    </div>`
+    return `<div class="card border-success mb-3" style="max-width: 25rem;">
+    <div class="card-header bg-transparent border-success">${engineers.getName()}</div>
+    <div class="card-body text-success">
+      <h5 class="card-title">Attributes</h5>
+      <p class="card-text">${engineers.getId()}</p>
+      <p class="card-text">${engineers.getEmail()}</p>
+      <p class="card-text">${engineers.getGithub()}</p>
+    </div>
+    <div class="card-footer bg-transparent border-success">${engineers.getRole()}</div>
+  </div>`
 }
 
 // Generates Intern Card
 const generateInterns = (interns) => {
-    return `<div class="card border-primary bg-dark" style="max-width: 18rem;">
-    <div class="card-header text-primary"><h1 class="header-span">${interns.name}</h1><br><h2 class="header-cap" style="font-size: 1.5 em;">Intern</h2></div>
-      <div class="card-body text-primary">
-        <h5 class="card-title">Attributes</h5>
-        <p class="card-text">ID: ${interns.id}</p>
-        <p class="card-text">Email: ${interns.email}</p>
-        <p class="card-text">School: ${interns.school}</p>
-      </div>
-    </div>`
+    return `<div class="card border-danger mb-3" style="max-width: 25rem;">
+    <div class="card-header bg-transparent border-success">${interns.getName()}</div>
+    <div class="card-body text-success">
+      <h5 class="card-title">Attributes</h5>
+      <p class="card-text">${interns.getId()}</p>
+      <p class="card-text">${interns.getEmail()}</p>
+      <p class="card-text">${interns.getSchool()}</p>
+    </div>
+    <div class="card-footer bg-transparent border-success">${interns.getRole()}</div>
+  </div>`
 }
 
 // Exports
