@@ -25,7 +25,7 @@ const generateTemplate = (memberCards) => {
 
 // Generates Manager Card
 const generateManagers = (managers) => {
-    return `<div class="card border-primary mb-3" style="max-width: 25rem;">
+    return `<div class="card border-primary mb-3">
       <div class="card-header bg-transparent border-primary">${managers.getName()}</div>
       <div class="card-body text-primary">
         <h5 class="card-title">Attributes</h5>
@@ -39,7 +39,7 @@ const generateManagers = (managers) => {
 
 // Generates Engineer Card
 const generateEngineers = (engineers) => {
-    return `<div class="card border-success mb-3" style="max-width: 25rem;">
+    return `<div class="card border-success mb-3">
     <div class="card-header bg-transparent border-success">${engineers.getName()}</div>
     <div class="card-body text-success">
       <h5 class="card-title">Attributes</h5>
@@ -53,7 +53,7 @@ const generateEngineers = (engineers) => {
 
 // Generates Intern Card
 const generateInterns = (interns) => {
-    return `<div class="card border-danger mb-3" style="max-width: 25rem;">
+    return `<div class="card border-danger mb-3">
     <div class="card-header bg-transparent border-danger">${interns.getName()}</div>
     <div class="card-body text-danger">
       <h5 class="card-title">Attributes</h5>
