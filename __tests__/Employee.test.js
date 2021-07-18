@@ -2,6 +2,14 @@ const Employee = require('../lib/Employee');
 
 describe("Employee", () => {
 
+    describe('getRole', () => {
+        it("should return the 'employee' role", () => {
+            let employee = new Employee('Brooks', 22, 'brooks@gmail.com', 'WorldUnfurled');
+    
+            expect(employee.getRole()).toEqual('Employee');
+        });
+    });
+
     describe('getName', () => {
         it("should return the employee's name", () => {
             let employee = new Employee('Brooks', 22, 'brooks@gmail.com');

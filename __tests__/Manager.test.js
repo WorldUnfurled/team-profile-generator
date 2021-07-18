@@ -2,6 +2,14 @@ const Manager = require('../lib/Manager');
 
 describe("Manager", () => {
 
+    describe('getRole', () => {
+        it("should return the 'manager' role", () => {
+            let manager = new Manager('Brooks', 22, 'brooks@gmail.com', 69);
+    
+            expect(manager.getRole()).toEqual('Manager');
+        });
+    });
+
     describe('getName', () => {
         it("should return the manager's name", () => {
             let manager = new Manager('Brooks', 22, 'brooks@gmail.com', 69);

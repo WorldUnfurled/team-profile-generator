@@ -2,6 +2,14 @@ const Intern = require('../lib/Intern');
 
 describe("Intern", () => {
 
+    describe('getRole', () => {
+        it("should return the 'intern' role", () => {
+            let intern = new Intern('Brooks', 22, 'brooks@gmail.com', 'Berry');
+    
+            expect(intern.getRole()).toEqual('Intern');
+        });
+    });
+
     describe('getName', () => {
         it("should return the intern's name", () => {
             let intern = new Intern('Brooks', 22, 'brooks@gmail.com', 'Berry');
