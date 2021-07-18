@@ -29,9 +29,9 @@ const generateManagers = (managers) => {
       <div class="card-header bg-transparent border-primary">${managers.getName()}</div>
       <div class="card-body text-primary">
         <h5 class="card-title">Attributes</h5>
-        <p class="card-text">${managers.getId()}</p>
-        <p class="card-text">${managers.getEmail()}</p>
-        <p class="card-text">${managers.getOfficeNumber()}</p>
+        <p class="card-text">ID: ${managers.getId()}</p>
+        <p class="card-text" href="mailto:${managers.getEmail()}">Email: ${managers.getEmail()}</p>
+        <p class="card-text">Office No.: ${managers.getOfficeNumber()}</p>
       </div>
       <div class="card-footer bg-transparent border-primary">${managers.getRole()}</div>
     </div>`
@@ -43,9 +43,9 @@ const generateEngineers = (engineers) => {
     <div class="card-header bg-transparent border-success">${engineers.getName()}</div>
     <div class="card-body text-success">
       <h5 class="card-title">Attributes</h5>
-      <p class="card-text">${engineers.getId()}</p>
-      <p class="card-text">${engineers.getEmail()}</p>
-      <p class="card-text">${engineers.getGithub()}</p>
+      <p class="card-text">ID: ${engineers.getId()}</p>
+      <p class="card-text" href="mailto:${engineers.getEmail()}">Email: ${engineers.getEmail()}</p>
+      <p class="card-text" href="github.com/${engineers.getGithub()}">Github: github.com/${engineers.getGithub()}</p>
     </div>
     <div class="card-footer bg-transparent border-success">${engineers.getRole()}</div>
   </div>`
@@ -57,9 +57,9 @@ const generateInterns = (interns) => {
     <div class="card-header bg-transparent border-danger">${interns.getName()}</div>
     <div class="card-body text-danger">
       <h5 class="card-title">Attributes</h5>
-      <p class="card-text">${interns.getId()}</p>
-      <p class="card-text">${interns.getEmail()}</p>
-      <p class="card-text">${interns.getSchool()}</p>
+      <p class="card-text">ID: ${interns.getId()}</p>
+      <p class="card-text" href="mailto:${interns.getEmail()}">Email: ${interns.getEmail()}</p>
+      <p class="card-text">School: ${interns.getSchool()}</p>
     </div>
     <div class="card-footer bg-transparent border-danger">${interns.getRole()}</div>
   </div>`
