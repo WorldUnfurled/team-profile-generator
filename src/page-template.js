@@ -25,15 +25,15 @@ const generateTemplate = (memberCards) => {
 
 // Generates Manager Card
 const generateManagers = (managers) => {
-    return `<div class="card border-success mb-3" style="max-width: 25rem;">
+    return `<div class="card border-primary mb-3" style="max-width: 25rem;">
       <div class="card-header bg-transparent border-primary">${managers.getName()}</div>
-      <div class="card-body text-success">
+      <div class="card-body text-primary">
         <h5 class="card-title">Attributes</h5>
         <p class="card-text">${managers.getId()}</p>
         <p class="card-text">${managers.getEmail()}</p>
         <p class="card-text">${managers.getOfficeNumber()}</p>
       </div>
-      <div class="card-footer bg-transparent border-success">${managers.getRole()}</div>
+      <div class="card-footer bg-transparent border-primary">${managers.getRole()}</div>
     </div>`
 }
 
@@ -54,14 +54,14 @@ const generateEngineers = (engineers) => {
 // Generates Intern Card
 const generateInterns = (interns) => {
     return `<div class="card border-danger mb-3" style="max-width: 25rem;">
-    <div class="card-header bg-transparent border-success">${interns.getName()}</div>
-    <div class="card-body text-success">
+    <div class="card-header bg-transparent border-danger">${interns.getName()}</div>
+    <div class="card-body text-danger">
       <h5 class="card-title">Attributes</h5>
       <p class="card-text">${interns.getId()}</p>
       <p class="card-text">${interns.getEmail()}</p>
       <p class="card-text">${interns.getSchool()}</p>
     </div>
-    <div class="card-footer bg-transparent border-success">${interns.getRole()}</div>
+    <div class="card-footer bg-transparent border-danger">${interns.getRole()}</div>
   </div>`
 }
 
